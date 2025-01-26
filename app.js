@@ -12,14 +12,23 @@ function adicionarAmigo(){
     resultado.innerHTML = '';
     amigo.value = '';
     amigos.push(novoAmigo);
-    parecerLista(amigos);
+    aparecerLista(amigos);
   }
 }
 
-function parecerLista(amigos){
+function aparecerLista(amigos){
   listaAmigos.innerHTML = '';
-  console.log(quantidade);
   for(const amigo of amigos){
     listaAmigos.innerHTML += `<li>${amigo}</li>`;
+  }
+}
+
+function sortearAmigo(amigos){
+  if(amigos.length === 0){
+    resultado.innerHTML = '<p class="error">A lista está vazia!</p>';
+  }else{
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    const amigoSorteado = amigos[indiceAleatorio];
+    resultado.innerHTML = `<p>O amigo sorteado é: ${amigoSorteado}</p>`;
   }
 }
