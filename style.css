@@ -142,6 +142,10 @@ ul {
     text-align: center;
 }
 
+.error{
+    color: red;
+}
+
 /* Botão de sortear título */
 .button-draw {
     display: flex;
