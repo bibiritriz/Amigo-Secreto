@@ -23,7 +23,7 @@ function aparecerLista(amigos){
   }
 }
 
-function sortearAmigo(amigos){
+function sortearAmigo(){
   if(amigos.length === 0){
     resultado.innerHTML = '<p class="error">A lista está vazia!</p>';
   }else{
