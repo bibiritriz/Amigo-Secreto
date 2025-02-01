@@ -20,7 +20,7 @@ function aparecerLista(amigos){
 }
 
 function sortearAmigo(){
-  if (amigos.length === 0) return window.alert('A lista está vazia!');
+  if (amigos.length === 0) return window.alert('A lista está vazia! Adicione nomes antes de sortear.');
   let indiceAleatorio = Math.floor(Math.random() * amigos.length);
   const amigoSorteado = amigos[indiceAleatorio];
   resultado.innerHTML = `<p>O amigo sorteado é: ${amigoSorteado}</p>`;
